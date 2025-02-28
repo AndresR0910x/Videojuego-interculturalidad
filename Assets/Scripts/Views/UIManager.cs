@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
 {
     public GameObject mainPanel;
     public GameObject panelRegistro;
-    public GameObject panelNivel1; // Nuevo panel agregado
+    public GameObject panelNivel1; 
     public GameObject[] panelesJuego;
 
     void Start()
@@ -20,7 +20,6 @@ public class UIManager : MonoBehaviour
         mainPanel.SetActive(false);
         panelRegistro.SetActive(false);
         panelNivel1.SetActive(false);
-        //panelJuegoFrutas1.SetActive(false); // Desactivar el nuevo panel
 
         foreach (var panel in panelesJuego)
         {
