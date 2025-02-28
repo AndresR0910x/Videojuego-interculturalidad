@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text[] feedbackTexts; // Un TMP_Text para feedback en cada panel
 
     private Button[] answerButtons; // Botones de respuesta en cada panel
-    private int currentPanelIndex = 0;
-    private int currentQuestionIndex = 0;
+    public int currentPanelIndex = 0;
+    public int currentQuestionIndex = 0;
 
     private Question[] questions;
 
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         SetupCurrentPanel();
     }
 
-    void LoadQuestions()
+   public void LoadQuestions()
     {
         questions = new Question[]
         {
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         ShowQuestion();
     }
 
-    void ShowQuestion()
+  public  void ShowQuestion()
     {
         if (currentQuestionIndex < questions.Length)
         {
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void MoveToNextPanel()
+ public  void MoveToNextPanel()
     {
         if (currentPanelIndex < gamePanels.Length - 1)
         {
