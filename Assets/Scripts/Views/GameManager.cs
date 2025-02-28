@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     private Question[] questions;
 
-    void Start()
+    public void Start()
     {
         LoadQuestions();
         SetupCurrentPanel();
@@ -32,8 +32,13 @@ public class GameManager : MonoBehaviour
         };
     }
 
-    void SetupCurrentPanel()
+   public void SetupCurrentPanel()
     {
+        Debug.Log("gamePanels: " + gamePanels);
+        Debug.Log("questionTexts: " + questionTexts);
+        Debug.Log("feedbackTexts: " + feedbackTexts);
+        Debug.Log("currentPanelIndex: " + currentPanelIndex);
+
         // Desactiva todos los paneles y activa solo el actual
         for (int i = 0; i < gamePanels.Length; i++)
         {
@@ -73,7 +78,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void CheckAnswer(int selectedIndex)
+   public void CheckAnswer(int selectedIndex)
     {
         if (selectedIndex == questions[currentQuestionIndex].correctAnswer)
         {
