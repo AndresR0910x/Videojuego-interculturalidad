@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Inteculturalidad-project.sln"
+    "dotnet.defaultSolution": "Videojuego-interculturalidad.sln"
 }
